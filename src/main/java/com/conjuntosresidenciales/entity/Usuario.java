@@ -1,14 +1,23 @@
-package com.conjuntosresidenciales.dto;
+package com.conjuntosresidenciales.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+
 @lombok.Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegistrarUsuarioRequest {
+@Entity
+@Table(name="usuarios_conjunto")
+public class Usuario {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String tipoDocumentoResidente;
     private Integer numeroDocumentoResidente;
     private String nombreResidente;

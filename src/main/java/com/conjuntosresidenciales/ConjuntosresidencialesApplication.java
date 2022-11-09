@@ -8,8 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ConjuntosresidencialesApplication{
 
 	public static void main(String[] args) {
-		System.out.println("El servicio si arranca");
-		System.out.println("Contruccion de servicio en proceso");
 		SpringApplication.run(ConjuntosresidencialesApplication.class, args);
 	}
 
